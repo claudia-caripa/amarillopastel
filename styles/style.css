@@ -4,6 +4,7 @@ body, html {
     margin: 0;
   height: 100%;
   line-height: 1.8;
+  box-sizing: border-box;
 }
   
 
@@ -12,9 +13,8 @@ body, html {
     overflow: hidden;
     /*background-color: #333;*/
     border-bottom: 1px #f9f9f9 solid;
-    
 }
-  
+
 .topnav a {
     float: left;
     display: block;
@@ -49,6 +49,9 @@ body, html {
 
 /*Header*/
 
+header{
+    margin-bottom: 100px;
+}
 header, header i{
     color: white;
 }
@@ -76,9 +79,10 @@ header a:visited{
 /* Full height image header */
 .bgimg-1 {
     background-position: center;
-    background-size: cover;
+    background-size:cover;
     background-image: url("../images/header.jpg");
-    min-height: 65%;
+    /*background-color: #ebcacf;*/
+    min-height: 75%;
 }
 
 
@@ -103,8 +107,8 @@ header a:visited{
     flex: 50%;
 }
 
-#promoimg{
-    height: 300px;
+.sectionimg{
+    height: 400px;
     border-radius: 10%;
 }
 
@@ -118,6 +122,27 @@ header a:visited{
 
 .promo a:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#promoimg{
+    height: 250px;
+}
+
+/*About section*/
+.about{
+    text-align: center;
+    margin-top: 20px;
+}
+.about p{
+    font-size: 20px;
+}
+.about-flex{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+.about-flexitem{
+    flex: 50%;
 }
 
 
@@ -144,7 +169,7 @@ header a:visited{
       text-align: left;
     }
 
-    #promoimg{
+    .sectionimg{
     height: 200px;
     }
 }
