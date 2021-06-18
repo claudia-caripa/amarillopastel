@@ -76,6 +76,7 @@ header a:visited{
 }
 
 .headericons{
+    position: relative;
     padding: 20px;
 }
 
@@ -130,6 +131,7 @@ header a:visited{
 
 #promoimg{
     height: 250px;
+    margin-top: 10px;
 }
 
 /*About section*/
@@ -152,6 +154,7 @@ header a:visited{
 /*Work section*/
 .work{
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 .work-flex{
     display: flex;
@@ -170,21 +173,20 @@ header a:visited{
 
 /*Footer*/
 footer{
-    height: 120px;
-    padding-bottom: 50px;
-    padding-left: 20px;
+    padding-bottom: 40px;
     padding-top: 10px;
     background-color: #f9f9f9;
+    line-height: normal;
+    text-align: center;
 }
 
 footer .logo{
     height: 70px;
     border-radius: 50%;
-    float: left;
-    margin-right: 20px;
 }
 footer div{
     margin-top: 10px;
+    font-size: 20px;
 }
 
 /*Media Queries*/
