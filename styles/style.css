@@ -6,6 +6,10 @@ body, html {
   line-height: 1.8;
   box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
   
 
 /*Navbar*/
@@ -50,7 +54,7 @@ body, html {
 /*Header*/
 
 header{
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 header, header i{
     color: white;
@@ -145,7 +149,19 @@ header a:visited{
     flex: 50%;
 }
 
+/*Work section*/
+.work-flex{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 120px;
+    padding-bottom: 0;
+    padding-top: 30px;
+}
 
+.workimg{
+    height: 300px;
+    margin: 2px;
+}
 
 /*Media Queries*/
 @media screen and (max-width: 800px) {
@@ -171,5 +187,13 @@ header a:visited{
 
     .sectionimg{
     height: 200px;
+    }
+
+    .work-flex{
+        padding: 50px;
+    }
+
+    .workimg{
+        height: 120px;
     }
 }
