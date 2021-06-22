@@ -10,6 +10,10 @@ body, html {
 html {
     scroll-behavior: smooth;
 }
+
+*{
+    box-sizing: border-box;
+}
   
 
 /*Navbar*/
@@ -152,23 +156,55 @@ header a:visited{
 }
 
 /*Work section*/
-.work{
-    margin-bottom: 20px;
-    margin-top: 50px;
-}
-.work-flex{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 50px 120px;
-    padding-bottom: 0;
-    padding-top: 30px;
-}
-
 .workimg{
-    height: 300px;
-    margin: 2px;
+    width: 100%;
 }
-
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 200px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .row{
+        padding: 0 80px;
+    }
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+      
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+    .disappear{
+        display: none;
+    }
+  }
 
 
 /*Footer*/
@@ -190,7 +226,7 @@ footer div{
 }
 
 /*Media Queries*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -199,7 +235,7 @@ footer div{
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
@@ -217,10 +253,15 @@ footer div{
     }
 
     .work-flex{
-        padding: 50px;
+        flex-direction: column;
+        padding: 30px 100px;
+        }
+
+    .work-flexitem{
+        flex: 100%;
     }
 
     .workimg{
-        height: 120px;
+        height: 200px;
     }
 }
